@@ -351,7 +351,7 @@ flowchart TD
     B --> C[scripts/export_registry.py]
     C --> D[registry_schema: keep closed subset + annotations]
     D --> E[render YAML: id, version, risk_class, min_auth_level,<br/>idempotent, readback_by, source, description, args_schema]
-    E --> F[registry/tools/id@version.yaml committed]
+    E --> F["registry/tools/id@version.yaml committed"]
     F --> G{export_registry.py --check<br/>test_registry_export.py}
     G -->|drift| C
     G -->|clean| H[Import YAML into agent-core registry]
